@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Dental Services - SmileBright Dental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <!-- Same navbar structure as index.html -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SmileBright</a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="meet-dentist.html" class="nav-link">Meet Dentist</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only"><a href="appointment.html" class="btn-appointment">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions-desktop">
+                <a href="appointment.html" class="btn-appointment">Book Appointment</a>
+            </div>
+            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Our Dental Services</h1>
+                <p>Comprehensive care for your entire family</p>
+            </div>
+        </section>
+
+        <section class="services-detailed">
+            <div class="services-detailed-container">
+                <div id="general" class="service-detailed-card">
+                    <div class="service-detailed-icon">🦷</div>
+                    <div class="service-detailed-content">
+                        <h2>General Dentistry</h2>
+                        <p>Regular dental checkups and cleanings are the foundation of good oral health. Our comprehensive general dentistry services include:</p>
+                        <ul>
+                            <li>Comprehensive oral exams</li>
+                            <li>Professional teeth cleaning</li>
+                            <li>Digital X-rays</li>
+                            <li>Fillings and restorations</li>
+                            <li>Gum disease treatment</li>
+                        </ul>
+                        <div class="service-price">Starting from $89</div>
+                        <a href="appointment.html" class="btn-outline">Book General Checkup →</a>
+                    </div>
+                </div>
+
+                <div id="cosmetic" class="service-detailed-card">
+                    <div class="service-detailed-icon">✨</div>
+                    <div class="service-detailed-content">
+                        <h2>Cosmetic Dentistry</h2>
+                        <p>Transform your smile with our advanced cosmetic treatments designed to boost your confidence.</p>
+                        <ul>
+                            <li>Professional teeth whitening</li>
+                            <li>Porcelain veneers</li>
+                            <li>Dental bonding</li>
+                            <li>Complete smile makeovers</li>
+                        </ul>
+                        <div class="service-price">From $199</div>
+                        <a href="appointment.html" class="btn-outline">Book Consultation →</a>
+                    </div>
+                </div>
+
+                <div id="root-canal" class="service-detailed-card">
+                    <div class="service-detailed-icon">🦷</div>
+                    <div class="service-detailed-content">
+                        <h2>Root Canal Therapy</h2>
+                        <p>Pain-free root canal treatment to save infected teeth and relieve discomfort.</p>
+                        <ul>
+                            <li>Pain management techniques</li>
+                            <li>Single-visit root canals</li>
+                            <li>Same-day crown placement</li>
+                        </ul>
+                        <div class="service-price">From $450</div>
+                        <a href="appointment.html" class="btn-outline">Book Root Canal →</a>
+                    </div>
+                </div>
+
+                <div id="pediatric" class="service-detailed-card">
+                    <div class="service-detailed-icon">👶</div>
+                    <div class="service-detailed-content">
+                        <h2>Pediatric Dentistry</h2>
+                        <p>Creating positive dental experiences for children that last a lifetime.</p>
+                        <ul>
+                            <li>First dental visits (age 1+)</li>
+                            <li>Sealants and fluoride treatments</li>
+                            <li>Gentle, kid-friendly approach</li>
+                            <li>Early orthodontic assessments</li>
+                        </ul>
+                        <div class="service-price">From $75</div>
+                        <a href="appointment.html" class="btn-outline">Book Child's Visit →</a>
+                    </div>
+                </div>
+
+                <div id="invisalign" class="service-detailed-card">
+                    <div class="service-detailed-icon">⭐</div>
+                    <div class="service-detailed-content">
+                        <h2>Invisalign Clear Aligners</h2>
+                        <p>Straighten your teeth discreetly with virtually invisible aligners.</p>
+                        <ul>
+                            <li>Free initial consultation</li>
+                            <li>3D digital treatment planning</li>
+                            <li>Flexible payment plans</li>
+                        </ul>
+                        <div class="service-price">From $2,500</div>
+                        <a href="appointment.html" class="btn-outline">Book Invisalign Consult →</a>
+                    </div>
+                </div>
+
+                <div id="emergency" class="service-detailed-card">
+                    <div class="service-detailed-icon">🚨</div>
+                    <div class="service-detailed-content">
+                        <h2>Emergency Dental Care</h2>
+                        <p>Same-day appointments for dental emergencies, including evenings and weekends.</p>
+                        <ul>
+                            <li>Severe tooth pain</li>
+                            <li>Broken or knocked-out teeth</li>
+                            <li>Lost fillings or crowns</li>
+                            <li>Abscesses and infections</li>
+                        </ul>
+                        <div class="service-price">Emergency fee: $149</div>
+                        <a href="tel:5551234567" class="btn-outline">Call Now: (555) 123-4567 →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-widget">
+        🚨 Emergency? Same-Day Appointments Available
+    </div>
+</body>
+</html>

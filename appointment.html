@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - SmileBright Dental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SmileBright</a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="meet-dentist.html" class="nav-link">Meet Dentist</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only"><a href="appointment.html" class="btn-appointment">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions-desktop">
+                <a href="appointment.html" class="btn-appointment">Book Appointment</a>
+            </div>
+            <button class="hamburger-menu" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Book Your Appointment</h1>
+                <p>Schedule your visit in seconds. We'll confirm within 24 hours.</p>
+            </div>
+        </section>
+
+        <section class="appointment-section">
+            <div class="appointment-container">
+                <div class="appointment-info">
+                    <h2>What to Expect</h2>
+                    <ul>
+                        <li>✓ Confirmation within 24 hours</li>
+                        <li>✓ Free consultation for new patients</li>
+                        <li>✓ Insurance verification before your visit</li>
+                        <li>✓ Text reminders 48 hours before</li>
+                    </ul>
+                    
+                    <div class="contact-info-box">
+                        <h3>Prefer to call?</h3>
+                        <a href="tel:5551234567" class="phone-number">📞 (555) 123-4567</a>
+                        <p>Mon-Fri: 9am-6pm | Sat: 9am-2pm</p>
+                    </div>
+                </div>
+
+                <div class="appointment-form-wrapper">
+                    <form id="appointmentForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="general">General Checkup & Cleaning</option>
+                                <option value="cosmetic">Cosmetic Consultation</option>
+                                <option value="emergency">Emergency Dental Care</option>
+                                <option value="invisalign">Invisalign Consultation</option>
+                                <option value="root-canal">Root Canal</option>
+                                <option value="pediatric">Pediatric Dentistry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="9am">9:00 AM</option>
+                                    <option value="10am">10:00 AM</option>
+                                    <option value="11am">11:00 AM</option>
+                                    <option value="1pm">1:00 PM</option>
+                                    <option value="2pm">2:00 PM</option>
+                                    <option value="3pm">3:00 PM</option>
+                                    <option value="4pm">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Notes</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Any specific concerns or questions?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-submit">Request Appointment →</button>
+                        <p class="form-note">*Required fields. We'll respond within 24 hours.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-widget">
+        🚨 Emergency? Same-Day Appointments Available
+    </div>
+
+    <script>
+        // Form validation and submission handling
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !email || !phone) {
+                e.preventDefault();
+                alert('Please fill in all required fields.');
+            }
+        });
+        
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').min = today;
+    </script>
+</body>
+</html>

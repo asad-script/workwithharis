@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - SmileBright Dental</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SmileBright</a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="meet-dentist.html" class="nav-link">Meet Dentist</a></li>
+                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="mobile-only"><a href="appointment.html" class="btn-appointment">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="nav-actions-desktop">
+                <a href="appointment.html" class="btn-appointment">Book Appointment</a>
+            </div>
+            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1>Frequently Asked Questions</h1>
+                <p>Everything you need to know about SmileBright Dental</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq-categories">
+                    <button class="category-btn active" data-category="all">All Questions</button>
+                    <button class="category-btn" data-category="appointments">Appointments</button>
+                    <button class="category-btn" data-category="insurance">Insurance & Payment</button>
+                    <button class="category-btn" data-category="procedures">Procedures</button>
+                    <button class="category-btn" data-category="children">Children's Dentistry</button>
+                </div>
+
+                <div class="faq-accordion">
+                    <div class="faq-item" data-category="appointments">
+                        <div class="faq-question">
+                            <span>How do I schedule an appointment?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can schedule an appointment by:</p>
+                            <ul>
+                                <li>Calling us at (555) 123-4567</li>
+                                <li>Using our online booking form on the Appointment page</li>
+                                <li>Emailing us at appointments@smilebright.com</li>
+                            </ul>
+                            <p>We recommend booking 2-3 weeks in advance for routine cleanings, but we offer same-day appointments for emergencies.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="insurance">
+                        <div class="faq-question">
+                            <span>Do you accept insurance?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We accept most major dental insurance plans including:</p>
+                            <ul>
+                                <li>Delta Dental</li>
+                                <li>Cigna</li>
+                                <li>Aetna</li>
+                                <li>MetLife</li>
+                                <li>Guardian</li>
+                            </ul>
+                            <p>We also offer flexible payment plans and financing options through CareCredit. Call us to verify your specific plan.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="appointments">
+                        <div class="faq-question">
+                            <span>What should I bring to my first visit?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Please bring:</p>
+                            <ul>
+                                <li>Valid ID</li>
+                                <li>Insurance card (if applicable)</li>
+                                <li>List of current medications</li>
+                                <li>Any recent dental X-rays (if available)</li>
+                                <li>Completed new patient forms (we'll email these to you)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="procedures">
+                        <div class="faq-question">
+                            <span>Is dental treatment painful?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We prioritize your comfort! We use:</p>
+                            <ul>
+                                <li>Advanced local anesthetics for numbing</li>
+                                <li>Laser dentistry for minimally invasive procedures</li>
+                                <li>Sedation options for anxious patients</li>
+                                <li>TV and music during treatments</li>
+                            </ul>
+                            <p>Most patients report little to no discomfort during their procedures.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="children">
+                        <div class="faq-question">
+                            <span>At what age should my child first see a dentist?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The American Dental Association recommends children have their first dental visit by age 1 or within 6 months of their first tooth appearing. Early visits help:</p>
+                            <ul>
+                                <li>Prevent cavities</li>
+                                <li>Build positive dental habits</li>
+                                <li>Catch developmental issues early</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="insurance">
+                        <div class="faq-question">
+                            <span>Do you offer payment plans?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer:</p>
+                            <ul>
+                                <li>CareCredit medical financing (6-12 months interest-free)</li>
+                                <li>In-house payment plans for larger treatments</li>
+                                <li>10% discount for upfront cash payments</li>
+                                <li>Senior and military discounts</li>
+                            </ul>
+                            <p>Contact our billing department to discuss options that fit your budget.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="procedures">
+                        <div class="faq-question">
+                            <span>How often should I get dental cleanings?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Most patients should get professional cleanings every 6 months. However, some patients may need more frequent visits (every 3-4 months) if they have:</p>
+                            <ul>
+                                <li>Gum disease</li>
+                                <li>Diabetes</li>
+                                <li>A history of frequent cavities</li>
+                                <li>Smoking habits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-widget">
+        🚨 Emergency? Same-Day Appointments Available
+    </div>
+
+    <script>
+        // FAQ Accordion JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Category filtering
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const category = btn.getAttribute('data-category');
+                    
+                    // Filter FAQ items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
