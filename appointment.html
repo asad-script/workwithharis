@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your dental appointment online at SmileBright Dental. Same-day appointments available for emergencies. Free consultation for new patients.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DentalClinic",
+        "name": "SmileBright Dental",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Dental Avenue",
+            "addressLocality": "Smile City",
+            "addressRegion": "CA",
+            "postalCode": "90210"
+        },
+        "telephone": "(555) 123-4567",
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00",
+        "priceRange": "$$"
+    }
+    </script>
     <title>Book Appointment - SmileBright Dental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -46,16 +69,16 @@
             <div class="appointment-container">
                 <div class="appointment-info">
                     <h2>What to Expect</h2>
-                    <ul>
-                        <li>✓ Confirmation within 24 hours</li>
-                        <li>✓ Free consultation for new patients</li>
-                        <li>✓ Insurance verification before your visit</li>
-                        <li>✓ Text reminders 48 hours before</li>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-check" style="color: #0A6E6E; margin-right: 8px;"></i>Confirmation within 24 hours</li>
+                        <li><i class="fas fa-check" style="color: #0A6E6E; margin-right: 8px;"></i>Free consultation for new patients</li>
+                        <li><i class="fas fa-check" style="color: #0A6E6E; margin-right: 8px;"></i>Insurance verification before your visit</li>
+                        <li><i class="fas fa-check" style="color: #0A6E6E; margin-right: 8px;"></i>Text reminders 48 hours before</li>
                     </ul>
                     
                     <div class="contact-info-box">
                         <h3>Prefer to call?</h3>
-                        <a href="tel:5551234567" class="phone-number">📞 (555) 123-4567</a>
+                        <a href="tel:5551234567" class="phone-number"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i>(555) 123-4567</a>
                         <p>Mon-Fri: 9am-6pm | Sat: 9am-2pm</p>
                     </div>
                 </div>
@@ -123,9 +146,40 @@
         </section>
     </main>
 
-    <div class="floating-widget">
-        🚨 Emergency? Same-Day Appointments Available
-    </div>
+    <a href="appointment.html" class="floating-widget">
+        <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Emergency? Same-Day Appointments Available
+    </a>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>SmileBright Dental</h3>
+                <p>Advanced dentistry with a gentle touch since 2010.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt" style="color: #E8B86B; margin-right: 8px;"></i>123 Dental Avenue, Smile City, CA 90210</p>
+                <p><i class="fas fa-phone" style="color: #E8B86B; margin-right: 8px;"></i>(555) 123-4567</p>
+                <p><i class="fas fa-envelope" style="color: #E8B86B; margin-right: 8px;"></i>hello@smilebright.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Hours</h3>
+                <p>Mon-Fri: 9am-6pm<br>Sat: 9am-2pm<br>Sun: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SmileBright Dental. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
         // Form validation and submission handling

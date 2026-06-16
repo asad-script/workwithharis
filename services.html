@@ -3,7 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive dental services including general dentistry, cosmetic treatments, root canals, pediatric care, Invisalign, and emergency services.">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DentalClinic",
+        "name": "SmileBright Dental",
+        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Dental Avenue",
+            "addressLocality": "Smile City",
+            "addressRegion": "CA",
+            "postalCode": "90210"
+        },
+        "telephone": "(555) 123-4567",
+        "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00",
+        "priceRange": "$$"
+    }
+    </script>
     <title>Our Dental Services - SmileBright Dental</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
@@ -46,7 +69,7 @@
         <section class="services-detailed">
             <div class="services-detailed-container">
                 <div id="general" class="service-detailed-card">
-                    <div class="service-detailed-icon">🦷</div>
+                    <div class="service-detailed-icon"><i class="fas fa-tooth" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
                         <h2>General Dentistry</h2>
                         <p>Regular dental checkups and cleanings are the foundation of good oral health. Our comprehensive general dentistry services include:</p>
@@ -58,12 +81,12 @@
                             <li>Gum disease treatment</li>
                         </ul>
                         <div class="service-price">Starting from $89</div>
-                        <a href="appointment.html" class="btn-outline">Book General Checkup →</a>
+                        <a href="appointment.html" class="btn-outline">Book General Checkup &rarr;</a>
                     </div>
                 </div>
 
                 <div id="cosmetic" class="service-detailed-card">
-                    <div class="service-detailed-icon">✨</div>
+                    <div class="service-detailed-icon"><i class="fas fa-star" style="color: #E8B86B;"></i></div>
                     <div class="service-detailed-content">
                         <h2>Cosmetic Dentistry</h2>
                         <p>Transform your smile with our advanced cosmetic treatments designed to boost your confidence.</p>
@@ -74,12 +97,12 @@
                             <li>Complete smile makeovers</li>
                         </ul>
                         <div class="service-price">From $199</div>
-                        <a href="appointment.html" class="btn-outline">Book Consultation →</a>
+                        <a href="appointment.html" class="btn-outline">Book Consultation &rarr;</a>
                     </div>
                 </div>
 
                 <div id="root-canal" class="service-detailed-card">
-                    <div class="service-detailed-icon">🦷</div>
+                    <div class="service-detailed-icon"><i class="fas fa-tooth" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
                         <h2>Root Canal Therapy</h2>
                         <p>Pain-free root canal treatment to save infected teeth and relieve discomfort.</p>
@@ -89,12 +112,12 @@
                             <li>Same-day crown placement</li>
                         </ul>
                         <div class="service-price">From $450</div>
-                        <a href="appointment.html" class="btn-outline">Book Root Canal →</a>
+                        <a href="appointment.html" class="btn-outline">Book Root Canal &rarr;</a>
                     </div>
                 </div>
 
                 <div id="pediatric" class="service-detailed-card">
-                    <div class="service-detailed-icon">👶</div>
+                    <div class="service-detailed-icon"><i class="fas fa-baby" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
                         <h2>Pediatric Dentistry</h2>
                         <p>Creating positive dental experiences for children that last a lifetime.</p>
@@ -105,12 +128,12 @@
                             <li>Early orthodontic assessments</li>
                         </ul>
                         <div class="service-price">From $75</div>
-                        <a href="appointment.html" class="btn-outline">Book Child's Visit →</a>
+                        <a href="appointment.html" class="btn-outline">Book Child's Visit &rarr;</a>
                     </div>
                 </div>
 
                 <div id="invisalign" class="service-detailed-card">
-                    <div class="service-detailed-icon">⭐</div>
+                    <div class="service-detailed-icon"><i class="fas fa-smile" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
                         <h2>Invisalign Clear Aligners</h2>
                         <p>Straighten your teeth discreetly with virtually invisible aligners.</p>
@@ -120,12 +143,12 @@
                             <li>Flexible payment plans</li>
                         </ul>
                         <div class="service-price">From $2,500</div>
-                        <a href="appointment.html" class="btn-outline">Book Invisalign Consult →</a>
+                        <a href="appointment.html" class="btn-outline">Book Invisalign Consult &rarr;</a>
                     </div>
                 </div>
 
                 <div id="emergency" class="service-detailed-card">
-                    <div class="service-detailed-icon">🚨</div>
+                    <div class="service-detailed-icon"><i class="fas fa-ambulance" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
                         <h2>Emergency Dental Care</h2>
                         <p>Same-day appointments for dental emergencies, including evenings and weekends.</p>
@@ -136,15 +159,46 @@
                             <li>Abscesses and infections</li>
                         </ul>
                         <div class="service-price">Emergency fee: $149</div>
-                        <a href="tel:5551234567" class="btn-outline">Call Now: (555) 123-4567 →</a>
+                        <a href="tel:5551234567" class="btn-outline">Call Now: (555) 123-4567 &rarr;</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="floating-widget">
-        🚨 Emergency? Same-Day Appointments Available
-    </div>
+    <a href="appointment.html" class="floating-widget">
+        <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Emergency? Same-Day Appointments Available
+    </a>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>SmileBright Dental</h3>
+                <p>Advanced dentistry with a gentle touch since 2010.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt" style="color: #E8B86B; margin-right: 8px;"></i>123 Dental Avenue, Smile City, CA 90210</p>
+                <p><i class="fas fa-phone" style="color: #E8B86B; margin-right: 8px;"></i>(555) 123-4567</p>
+                <p><i class="fas fa-envelope" style="color: #E8B86B; margin-right: 8px;"></i>hello@smilebright.com</p>
+            </div>
+            <div class="footer-column">
+                <h3>Hours</h3>
+                <p>Mon-Fri: 9am-6pm<br>Sat: 9am-2pm<br>Sun: Closed</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SmileBright Dental. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,4 @@
 /* SmileBright Dental Clinic CSS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* CSS Reset */
 * {
@@ -386,6 +385,7 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     cursor: pointer;
     transition: transform 0.3s ease;
+    text-decoration: none;
 }
 
 .floating-widget:hover {
@@ -1483,4 +1483,45 @@ body {
     min-height: auto;
     display: block;
     width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: #2C3E50;
+    color: #F5F0E8;
+    padding: 3rem 5% 1rem;
+    margin-top: 4rem;
+}
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    color: #E8B86B;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+.footer-column a {
+    color: #F5F0E8;
+    text-decoration: none;
+}
+.footer-column a:hover {
+    color: #E8B86B;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
 }
