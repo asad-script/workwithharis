@@ -1192,8 +1192,16 @@
 
     <!-- SERVICES -->
     <section id="services">
-        <p class="section-label">What I Offer</p>
-        <h2 class="section-title">Services</h2>
+        <div class="pricing-header-wrap">
+            <div>
+                <p class="section-label">What I Offer</p>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <div class="pricing-toggle">
+                <button class="toggle-btn toggle-inr active" onclick="showINR()">₹ India</button>
+                <button class="toggle-btn toggle-usd" onclick="showUSD()">$ International</button>
+            </div>
+        </div>
 
         <div class="services-grid">
             <div class="service-cell">
@@ -1231,8 +1239,8 @@
                 <h2 class="section-title">Packages</h2>
             </div>
             <div class="pricing-toggle">
-                <button class="toggle-btn active" id="toggleINR" onclick="showINR()">₹ India</button>
-                <button class="toggle-btn" id="toggleUSD" onclick="showUSD()">$ International</button>
+                <button class="toggle-btn toggle-inr active" onclick="showINR()">₹ India</button>
+                <button class="toggle-btn toggle-usd" onclick="showUSD()">$ International</button>
             </div>
         </div>
 
@@ -1428,14 +1436,14 @@
         // ── Currency toggle ──
         function showINR() {
             document.body.classList.remove('show-usd');
-            document.getElementById('toggleINR').classList.add('active');
-            document.getElementById('toggleUSD').classList.remove('active');
+            document.querySelectorAll('.toggle-inr').forEach(btn => btn.classList.add('active'));
+            document.querySelectorAll('.toggle-usd').forEach(btn => btn.classList.remove('active'));
         }
 
         function showUSD() {
             document.body.classList.add('show-usd');
-            document.getElementById('toggleUSD').classList.add('active');
-            document.getElementById('toggleINR').classList.remove('active');
+            document.querySelectorAll('.toggle-usd').forEach(btn => btn.classList.add('active'));
+            document.querySelectorAll('.toggle-inr').forEach(btn => btn.classList.remove('active'));
         }
 
         // ── Contact form ──
