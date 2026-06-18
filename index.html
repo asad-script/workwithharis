@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Haris — Freelance Web Developer based in Chennai, India. I build responsive, modern, and speed-optimized websites for small businesses.">
+    <meta name="description"
+        content="Haris — Freelance Web Developer based in Chennai, India. I build responsive, modern, and speed-optimized websites for small businesses.">
     <meta property="og:title" content="HARIS — Web Developer">
-    <meta property="og:description" content="Freelance Web Developer based in Chennai. I hand-code premium websites that help small businesses grow.">
+    <meta property="og:description"
+        content="Freelance Web Developer based in Chennai. I hand-code premium websites that help small businesses grow.">
     <meta property="og:type" content="website">
     <title>HARIS — Web Developer. Builder. Problem Solver.</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* ─── RESET & BASE ─── */
-        *, *::before, *::after {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --black:   #090909;
-            --white:   #F5F5F0;
-            --dim:     #8E8E93;
-            --accent:  #FF6B35;
-            --border:  rgba(245, 245, 240, 0.08);
+            --black: #090909;
+            --white: #F5F5F0;
+            --dim: #8E8E93;
+            --accent: #FF6B35;
+            --border: rgba(245, 245, 240, 0.08);
             --border-strong: rgba(245, 245, 240, 0.18);
             --font-display: 'Space Grotesk', sans-serif;
-            --font-mono:    'Space Mono', monospace;
+            --font-mono: 'Space Mono', monospace;
         }
 
         html {
@@ -57,13 +64,16 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: var(--black);
         }
+
         ::-webkit-scrollbar-thumb {
             background: var(--border-strong);
             border-radius: 3px;
         }
+
         ::-webkit-scrollbar-thumb:hover {
             background: var(--accent);
         }
@@ -170,9 +180,17 @@
             transition: all 0.3s ease;
         }
 
-        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
-        .hamburger.open span:nth-child(2) { opacity: 0; }
-        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
 
         /* ─── HERO ─── */
         .hero {
@@ -307,8 +325,13 @@
         }
 
         @keyframes marquee {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         /* ─── SECTION COMMON ─── */
@@ -489,7 +512,8 @@
             flex-grow: 1;
         }
 
-        .service-price {
+        .service-price-inr,
+        .service-price-usd {
             font-family: var(--font-mono);
             font-size: 0.85rem;
             font-weight: 700;
@@ -497,6 +521,18 @@
             letter-spacing: 0.03em;
             border-top: 1px solid var(--border);
             padding-top: 1.2rem;
+        }
+
+        .service-price-usd {
+            display: none;
+        }
+
+        body.show-usd .service-price-inr {
+            display: none;
+        }
+
+        body.show-usd .service-price-usd {
+            display: block;
         }
 
         /* ─── PRICING ─── */
@@ -520,7 +556,7 @@
         .pricing-toggle {
             display: flex;
             padding: 3px;
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             border: 1px solid var(--border);
             border-radius: 50px;
             width: fit-content;
@@ -565,7 +601,7 @@
         }
 
         .plan-card:hover {
-            background: rgba(255,255,255,0.01);
+            background: rgba(255, 255, 255, 0.01);
         }
 
         .plan-card.featured {
@@ -604,8 +640,13 @@
             display: none;
         }
 
-        body.show-usd .plan-price-inr { display: none; }
-        body.show-usd .plan-price-usd { display: block; }
+        body.show-usd .plan-price-inr {
+            display: none;
+        }
+
+        body.show-usd .plan-price-usd {
+            display: block;
+        }
 
         .plan-delivery {
             font-family: var(--font-mono);
@@ -722,7 +763,7 @@
             padding: 0.35rem 0.8rem;
             border-radius: 4px;
             letter-spacing: 0.04em;
-            background: rgba(255,255,255,0.01);
+            background: rgba(255, 255, 255, 0.01);
         }
 
         .currently {
@@ -925,19 +966,23 @@
 
         /* ─── MOBILE ─── */
         @media (max-width: 968px) {
+
             .pricing-plans,
             .services-grid {
                 grid-template-columns: 1fr;
             }
+
             .plan-card.featured {
                 border-left: 1px solid rgba(255, 107, 53, 0.25);
                 border-right: 1px solid rgba(255, 107, 53, 0.25);
             }
+
             .about-grid,
             .contact-wrap {
                 grid-template-columns: 1fr;
                 gap: 4rem;
             }
+
             .currently {
                 border-left: none;
                 border-top: 1px solid var(--border);
@@ -1015,6 +1060,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- NAV -->
@@ -1036,7 +1082,8 @@
     <section class="hero">
         <p class="hero-eyebrow">Chennai, India &bull; Freelance Developer</p>
         <h1>I'm Haris. <br>Web Developer. <br>Problem Solver.</h1>
-        <p class="hero-sub">I build clean, hand-coded websites for small businesses—the kind that load instantly, look premium, and actually help owners grow their brand. No page builders, no bloat.</p>
+        <p class="hero-sub">I build clean, hand-coded websites for small businesses—the kind that load instantly, look
+            premium, and actually help owners grow their brand. No page builders, no bloat.</p>
         <div class="hero-actions">
             <a href="#work" class="btn btn-primary">View My Work →</a>
             <a href="#contact" class="btn btn-ghost">Let's Talk</a>
@@ -1088,7 +1135,9 @@
                 <div class="work-body">
                     <p class="work-tag">Dental Clinic</p>
                     <h3 class="work-title">SmileBright Dental</h3>
-                    <p class="work-desc">An 8-page dental clinic website featuring interactive appointment booking, Google Maps integrations, and custom structured schema markups. Delivered with mobile-first response frameworks.</p>
+                    <p class="work-desc">An 8-page dental clinic website featuring interactive appointment booking,
+                        Google Maps integrations, and custom structured schema markups. Delivered with mobile-first
+                        response frameworks.</p>
                     <div class="work-features">
                         <span class="feature-tag">8 Pages</span>
                         <span class="feature-tag">Appointment Booking</span>
@@ -1097,7 +1146,8 @@
                         <span class="feature-tag">Schema.org</span>
                     </div>
                 </div>
-                <a href="https://smilebright-dental-seven.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+                <a href="https://smilebright-dental-seven.vercel.app" target="_blank" rel="noopener"
+                    class="work-link">Live Demo →</a>
             </div>
 
             <div class="work-item">
@@ -1105,7 +1155,8 @@
                 <div class="work-body">
                     <p class="work-tag">Restaurant</p>
                     <h3 class="work-title">Spice &amp; Savor</h3>
-                    <p class="work-desc">A modern restaurant portal with full food menu displays, table reservation forms, and food gallery layouts. Built hand-coded from scratch for ultimate performance.</p>
+                    <p class="work-desc">A modern restaurant portal with full food menu displays, table reservation
+                        forms, and food gallery layouts. Built hand-coded from scratch for ultimate performance.</p>
                     <div class="work-features">
                         <span class="feature-tag">Menu Showcase</span>
                         <span class="feature-tag">Table Reservation</span>
@@ -1113,7 +1164,8 @@
                         <span class="feature-tag">Responsive</span>
                     </div>
                 </div>
-                <a href="https://spiceandsavour-restaurant.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+                <a href="https://spiceandsavour-restaurant.vercel.app" target="_blank" rel="noopener"
+                    class="work-link">Live Demo →</a>
             </div>
 
             <div class="work-item">
@@ -1121,7 +1173,8 @@
                 <div class="work-body">
                     <p class="work-tag">Gym &amp; Fitness</p>
                     <h3 class="work-title">Iron Peak Fitness</h3>
-                    <p class="work-desc">A comprehensive gym website containing class schedules, trainer profiles, tiered membership plans, transformations gallery, and FAQ accordion.</p>
+                    <p class="work-desc">A comprehensive gym website containing class schedules, trainer profiles,
+                        tiered membership plans, transformations gallery, and FAQ accordion.</p>
                     <div class="work-features">
                         <span class="feature-tag">8 Pages</span>
                         <span class="feature-tag">Class Schedule</span>
@@ -1130,7 +1183,8 @@
                         <span class="feature-tag">FAQ Accordion</span>
                     </div>
                 </div>
-                <a href="https://iironpeakfitness-gym.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+                <a href="https://iironpeakfitness-gym.vercel.app" target="_blank" rel="noopener" class="work-link">Live
+                    Demo →</a>
             </div>
 
         </div>
@@ -1145,20 +1199,26 @@
             <div class="service-cell">
                 <p class="service-num">01</p>
                 <h3 class="service-name">Custom Website Design</h3>
-                <p class="service-desc">Built from scratch to match your brand. Mobile-first, fast-loading, and optimized for search engines. Every page designed with a purpose.</p>
-                <p class="service-price">₹10,000 – ₹25,000</p>
+                <p class="service-desc">Built from scratch to match your brand. Mobile-first, fast-loading, and
+                    optimized for search engines. Every page designed with a purpose.</p>
+                <p class="service-price-inr">₹10,000 – ₹25,000</p>
+                <p class="service-price-usd">$500 – $1,250</p>
             </div>
             <div class="service-cell">
                 <p class="service-num">02</p>
                 <h3 class="service-name">Template Customization</h3>
-                <p class="service-desc">Take an existing template and make it yours. I rework the colors, copy, layout, and features to fit your business exactly.</p>
-                <p class="service-price">₹8,000 – ₹15,000</p>
+                <p class="service-desc">Take an existing template and make it yours. I rework the colors, copy, layout,
+                    and features to fit your business exactly.</p>
+                <p class="service-price-inr">₹8,000 – ₹15,000</p>
+                <p class="service-price-usd">$400 – $750</p>
             </div>
             <div class="service-cell">
                 <p class="service-num">03</p>
                 <h3 class="service-name">Monthly Maintenance</h3>
-                <p class="service-desc">Ongoing support for content updates, performance fixes, and keeping your site healthy and secure month after month.</p>
-                <p class="service-price">₹2,000 – ₹5,000/mo</p>
+                <p class="service-desc">Ongoing support for content updates, performance fixes, and keeping your site
+                    healthy and secure month after month.</p>
+                <p class="service-price-inr">₹2,000 – ₹5,000/mo</p>
+                <p class="service-price-usd">$100 – $250/mo</p>
             </div>
         </div>
     </section>
@@ -1232,13 +1292,18 @@
 
         <div class="about-grid">
             <div class="about-text">
-                <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem;">I'm Haris.<br>Web Developer.<br>Problem Solver.</h2>
+                <h2
+                    style="font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem;">
+                    I'm Haris.<br>Web Developer.<br>Problem Solver.</h2>
 
-                <p>I'm a Computer Science student who builds websites for small businesses — the kind that look professional, load fast, and actually help owners get more customers.</p>
+                <p>I'm a Computer Science student who builds websites for small businesses — the kind that look
+                    professional, load fast, and actually help owners get more customers.</p>
 
-                <p>I started freelancing because most small businesses in Chennai either had no website, or had one that looked like it was built in 2009. There's a real gap there. I'm filling it.</p>
+                <p>I started freelancing because most small businesses in Chennai either had no website, or had one that
+                    looked like it was built in 2009. There's a real gap there. I'm filling it.</p>
 
-                <p>Every site I build is hand-coded — no page builders, no bloated templates — just clean HTML, CSS, and JavaScript that you can actually own and understand.</p>
+                <p>Every site I build is hand-coded — no page builders, no bloated templates — just clean HTML, CSS, and
+                    JavaScript that you can actually own and understand.</p>
 
                 <div class="skills-label">Skills</div>
                 <div class="skills-row">
@@ -1280,7 +1345,8 @@
             <div class="contact-intro">
                 <p class="section-label">Contact</p>
                 <h2>Let's Build Something.</h2>
-                <p>Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly — I respond within 24 hours.</p>
+                <p>Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly — I
+                    respond within 24 hours.</p>
 
                 <div class="contact-meta">
                     <a href="mailto:asadcache@gmail.com">
@@ -1294,7 +1360,8 @@
                     </a>
                 </div>
 
-                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); letter-spacing: 0.08em; line-height: 1.8;">
+                <p
+                    style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); letter-spacing: 0.08em; line-height: 1.8;">
                     BASED IN CHENNAI, INDIA<br>
                     AVAILABLE FOR REMOTE PROJECTS WORLDWIDE
                 </p>
@@ -1324,7 +1391,9 @@
                 </div>
                 <div class="form-field">
                     <label for="cMessage">Message</label>
-                    <textarea id="cMessage" placeholder="Tell me about your project — what it is, what you need, and when..." required></textarea>
+                    <textarea id="cMessage"
+                        placeholder="Tell me about your project — what it is, what you need, and when..."
+                        required></textarea>
                 </div>
                 <button type="submit" class="form-submit">Send Message →</button>
             </form>
@@ -1340,7 +1409,7 @@
     <script>
         // ── Hamburger ──
         const hamburger = document.getElementById('hamburger');
-        const navLinks  = document.getElementById('navLinks');
+        const navLinks = document.getElementById('navLinks');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('open');
@@ -1370,11 +1439,11 @@
         }
 
         // ── Contact form ──
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            const name  = document.getElementById('cName').value.trim();
+            const name = document.getElementById('cName').value.trim();
             const email = document.getElementById('cEmail').value.trim();
-            const msg   = document.getElementById('cMessage').value.trim();
+            const msg = document.getElementById('cMessage').value.trim();
 
             if (!name || !email || !msg) {
                 alert('Please fill in all required fields.');
@@ -1391,4 +1460,5 @@
         });
     </script>
 </body>
+
 </html>
