@@ -3,244 +3,1391 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SmileBright Dental offers gentle, advanced dentistry in Smile City. Same-day appointments, insurance accepted, and 5,000+ happy patients. Book your visit today!">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "DentalClinic",
-        "name": "SmileBright Dental",
-        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "123 Dental Avenue",
-            "addressLocality": "Smile City",
-            "addressRegion": "CA",
-            "postalCode": "90210"
-        },
-        "telephone": "(555) 123-4567",
-        "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00",
-        "priceRange": "$$"
-    }
-    </script>
-    <title>SmileBright Dental - Gentle Family Dentistry</title>
+    <meta name="description" content="Haris — Freelance Web Developer based in Chennai, India. I build responsive, modern, and speed-optimized websites for small businesses.">
+    <meta property="og:title" content="HARIS — Web Developer">
+    <meta property="og:description" content="Freelance Web Developer based in Chennai. I hand-code premium websites that help small businesses grow.">
+    <meta property="og:type" content="website">
+    <title>HARIS — Web Developer. Builder. Problem Solver.</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── RESET & BASE ─── */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black:   #090909;
+            --white:   #F5F5F0;
+            --dim:     #8E8E93;
+            --accent:  #FF6B35;
+            --border:  rgba(245, 245, 240, 0.08);
+            --border-strong: rgba(245, 245, 240, 0.18);
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-mono:    'Space Mono', monospace;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        /* ─── SCROLLBAR ─── */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--black);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-strong);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(9, 9, 9, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--dim);
+            letter-spacing: 0.03em;
+            position: relative;
+            padding: 0.2rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--white);
+            transition: width 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links .nav-cta {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--black) !important;
+            background: var(--white);
+            padding: 0.6rem 1.4rem;
+            border-radius: 4px;
+            transition: all 0.25s ease !important;
+        }
+
+        .nav-links .nav-cta::after {
+            display: none;
+        }
+
+        .nav-links .nav-cta:hover {
+            background: var(--accent) !important;
+            color: var(--white) !important;
+            transform: translateY(-1px);
+        }
+
+        /* hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5%;
+            padding-top: 100px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 8vw, 5.8rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin-bottom: 2.2rem;
+            max-width: 15ch;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--dim);
+            max-width: 520px;
+            line-height: 1.7;
+            margin-bottom: 3.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            letter-spacing: 0.03em;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid var(--border);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-trust {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--dim);
+            letter-spacing: 0.08em;
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+        }
+
+        .hero-trust strong {
+            color: var(--white);
+        }
+
+        /* ─── MARQUEE ─── */
+        .marquee-wrap {
+            overflow: hidden;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 0;
+            background: rgba(255, 107, 53, 0.02);
+        }
+
+        .marquee-track {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 24s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee-item .dot {
+            color: var(--accent);
+            margin: 0 2rem;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ─── SECTION COMMON ─── */
+        section {
+            padding: 8rem 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        h2.section-title {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 4rem;
+        }
+
+        /* ─── WORK ─── */
+        #work {
+            border-top: 1px solid var(--border);
+        }
+
+        .work-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-item {
+            display: grid;
+            grid-template-columns: 4rem 1fr auto;
+            align-items: start;
+            gap: 3rem;
+            padding: 3.5rem 0;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .work-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+
+        .work-item:hover {
+            background: rgba(255, 255, 255, 0.01);
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .work-num {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--dim);
+            padding-top: 0.4rem;
+            letter-spacing: 0.05em;
+        }
+
+        .work-body {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .work-tag {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .work-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            color: var(--white);
+        }
+
+        .work-desc {
+            font-size: 0.95rem;
+            color: var(--dim);
+            line-height: 1.7;
+            max-width: 600px;
+        }
+
+        .work-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .feature-tag {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--dim);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            letter-spacing: 0.03em;
+        }
+
+        .work-link {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--white);
+            white-space: nowrap;
+            border: 1px solid var(--border-strong);
+            padding: 0.6rem 1.4rem;
+            border-radius: 4px;
+            align-self: center;
+        }
+
+        .work-link:hover {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ─── SERVICES ─── */
+        #services {
+            border-top: 1px solid var(--border);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            border: 1px solid var(--border);
+            background: var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .service-cell {
+            background: var(--black);
+            padding: 3rem 2.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-cell:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .service-num {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            color: var(--white);
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--dim);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .service-price {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.03em;
+            border-top: 1px solid var(--border);
+            padding-top: 1.2rem;
+        }
+
+        /* ─── PRICING ─── */
+        #pricing {
+            border-top: 1px solid var(--border);
+        }
+
+        .pricing-header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .pricing-header-wrap h2.section-title {
+            margin-bottom: 0;
+        }
+
+        .pricing-toggle {
+            display: flex;
+            padding: 3px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            width: fit-content;
+        }
+
+        .toggle-btn {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            padding: 0.5rem 1.4rem;
+            border: none;
+            background: transparent;
+            color: var(--dim);
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.25s ease;
+        }
+
+        .toggle-btn.active {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .pricing-plans {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .plan-card {
+            background: var(--black);
+            padding: 3.5rem 2.5rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .plan-card:hover {
+            background: rgba(255,255,255,0.01);
+        }
+
+        .plan-card.featured {
+            background: rgba(255, 107, 53, 0.02);
+            border: 1px solid rgba(255, 107, 53, 0.25);
+            z-index: 2;
+        }
+
+        .plan-badge {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--accent);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .plan-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .plan-price-inr,
+        .plan-price-usd {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .plan-price-usd {
+            display: none;
+        }
+
+        body.show-usd .plan-price-inr { display: none; }
+        body.show-usd .plan-price-usd { display: block; }
+
+        .plan-delivery {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--dim);
+            letter-spacing: 0.05em;
+            margin-bottom: 2.5rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 3rem;
+            flex-grow: 1;
+        }
+
+        .plan-features li {
+            font-size: 0.9rem;
+            color: var(--dim);
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .plan-features li::before {
+            content: '→';
+            color: var(--accent);
+            flex-shrink: 0;
+            font-family: var(--font-mono);
+        }
+
+        .plan-cta {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 0.8rem;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            border: 1px solid var(--border-strong);
+            border-radius: 4px;
+            color: var(--white);
+            transition: all 0.25s ease;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .plan-cta:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .plan-card.featured .plan-cta {
+            background: var(--white);
+            border-color: var(--white);
+            color: var(--black);
+        }
+
+        .plan-card.featured .plan-cta:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ─── ABOUT ─── */
+        #about {
+            border-top: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--dim);
+            line-height: 1.8;
+            margin-bottom: 1.8rem;
+        }
+
+        .about-text p strong {
+            color: var(--white);
+        }
+
+        .skills-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+            font-weight: 700;
+        }
+
+        .skills-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-chip {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--white);
+            border: 1px solid var(--border);
+            padding: 0.35rem 0.8rem;
+            border-radius: 4px;
+            letter-spacing: 0.04em;
+            background: rgba(255,255,255,0.01);
+        }
+
+        .currently {
+            border-left: 1px solid var(--border-strong);
+            padding-left: 3rem;
+        }
+
+        .currently h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+
+        .currently-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .currently-list li {
+            font-size: 1rem;
+            color: var(--dim);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            line-height: 1.6;
+        }
+
+        .currently-list li::before {
+            content: '→';
+            color: var(--accent);
+            flex-shrink: 0;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        /* ─── CONTACT ─── */
+        #contact {
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start;
+        }
+
+        .contact-intro h2 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact-intro p {
+            font-size: 1.05rem;
+            color: var(--dim);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .contact-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .contact-meta a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--dim);
+            letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-meta a:hover {
+            color: var(--white);
+        }
+
+        .contact-meta span {
+            color: var(--accent);
+            margin-right: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-field label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--dim);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .form-field input,
+        .form-field select,
+        .form-field textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            border-radius: 0;
+            color: var(--white);
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            padding: 0.8rem 0;
+            outline: none;
+            transition: border-color 0.25s ease;
+            width: 100%;
+        }
+
+        .form-field input:focus,
+        .form-field select:focus,
+        .form-field textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .form-field select option {
+            background: #121212;
+            color: var(--white);
+        }
+
+        .form-field textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: var(--white);
+            color: var(--black);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            background: var(--accent);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-left {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--dim);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-tagline {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        /* ─── MOBILE ─── */
+        @media (max-width: 968px) {
+            .pricing-plans,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .plan-card.featured {
+                border-left: 1px solid rgba(255, 107, 53, 0.25);
+                border-right: 1px solid rgba(255, 107, 53, 0.25);
+            }
+            .about-grid,
+            .contact-wrap {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .currently {
+                border-left: none;
+                border-top: 1px solid var(--border);
+                padding-left: 0;
+                padding-top: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.2rem 5%;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--black);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2.5rem;
+                z-index: 99;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .nav-links .nav-cta {
+                font-size: 1.1rem;
+                padding: 0.8rem 2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: clamp(2.4rem, 10vw, 4.2rem);
+            }
+
+            .work-item {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 3rem 0;
+            }
+
+            .work-num {
+                display: none;
+            }
+
+            .work-link {
+                align-self: flex-start;
+                margin-top: 0.5rem;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 1.2rem;
+                text-align: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Responsive Navigation Bar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">SmileBright</a>
-            
-            <!-- Desktop Navigation -->
-            <div class="nav-menu" id="navMenu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="meet-dentist.html" class="nav-link">Meet Dentist</a></li>
-                    <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
-                    <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="mobile-only"><a href="appointment.html" class="btn-appointment">Book Appointment</a></li>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo">HARIS</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" class="nav-cta">Let's Talk →</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <p class="hero-eyebrow">Chennai, India &bull; Freelance Developer</p>
+        <h1>I'm Haris. <br>Web Developer. <br>Problem Solver.</h1>
+        <p class="hero-sub">I build clean, hand-coded websites for small businesses—the kind that load instantly, look premium, and actually help owners grow their brand. No page builders, no bloat.</p>
+        <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View My Work →</a>
+            <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+        </div>
+        <div class="hero-trust">
+            <span><strong>03</strong> Websites Built</span>
+            <span><strong>2+</strong> Years Experience</span>
+            <span><strong>100%</strong> Hand-Coded</span>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <!-- duplicated for seamless loop -->
+            <span class="marquee-item"><span class="dot">✦</span> HTML &amp; CSS</span>
+            <span class="marquee-item"><span class="dot">✦</span> JavaScript</span>
+            <span class="marquee-item"><span class="dot">✦</span> Responsive Design</span>
+            <span class="marquee-item"><span class="dot">✦</span> SEO Basics</span>
+            <span class="marquee-item"><span class="dot">✦</span> Mobile-First</span>
+            <span class="marquee-item"><span class="dot">✦</span> Performance Optimization</span>
+            <span class="marquee-item"><span class="dot">✦</span> Schema Markup</span>
+            <span class="marquee-item"><span class="dot">✦</span> WhatsApp Integration</span>
+            <span class="marquee-item"><span class="dot">✦</span> Vercel Deploy</span>
+            <span class="marquee-item"><span class="dot">✦</span> Git</span>
+            <!-- duplicate for loop -->
+            <span class="marquee-item"><span class="dot">✦</span> HTML &amp; CSS</span>
+            <span class="marquee-item"><span class="dot">✦</span> JavaScript</span>
+            <span class="marquee-item"><span class="dot">✦</span> Responsive Design</span>
+            <span class="marquee-item"><span class="dot">✦</span> SEO Basics</span>
+            <span class="marquee-item"><span class="dot">✦</span> Mobile-First</span>
+            <span class="marquee-item"><span class="dot">✦</span> Performance Optimization</span>
+            <span class="marquee-item"><span class="dot">✦</span> Schema Markup</span>
+            <span class="marquee-item"><span class="dot">✦</span> WhatsApp Integration</span>
+            <span class="marquee-item"><span class="dot">✦</span> Vercel Deploy</span>
+            <span class="marquee-item"><span class="dot">✦</span> Git</span>
+        </div>
+    </div>
+
+    <!-- WORK -->
+    <section id="work">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">What I've Built</h2>
+
+        <div class="work-list">
+
+            <div class="work-item">
+                <span class="work-num">01</span>
+                <div class="work-body">
+                    <p class="work-tag">Dental Clinic</p>
+                    <h3 class="work-title">SmileBright Dental</h3>
+                    <p class="work-desc">An 8-page dental clinic website featuring interactive appointment booking, Google Maps integrations, and custom structured schema markups. Delivered with mobile-first response frameworks.</p>
+                    <div class="work-features">
+                        <span class="feature-tag">8 Pages</span>
+                        <span class="feature-tag">Appointment Booking</span>
+                        <span class="feature-tag">Google Maps</span>
+                        <span class="feature-tag">Responsive</span>
+                        <span class="feature-tag">Schema.org</span>
+                    </div>
+                </div>
+                <a href="https://smilebright-dental-seven.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+            </div>
+
+            <div class="work-item">
+                <span class="work-num">02</span>
+                <div class="work-body">
+                    <p class="work-tag">Restaurant</p>
+                    <h3 class="work-title">Spice &amp; Savor</h3>
+                    <p class="work-desc">A modern restaurant portal with full food menu displays, table reservation forms, and food gallery layouts. Built hand-coded from scratch for ultimate performance.</p>
+                    <div class="work-features">
+                        <span class="feature-tag">Menu Showcase</span>
+                        <span class="feature-tag">Table Reservation</span>
+                        <span class="feature-tag">Food Gallery</span>
+                        <span class="feature-tag">Responsive</span>
+                    </div>
+                </div>
+                <a href="https://spiceandsavour-restaurant.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+            </div>
+
+            <div class="work-item">
+                <span class="work-num">03</span>
+                <div class="work-body">
+                    <p class="work-tag">Gym &amp; Fitness</p>
+                    <h3 class="work-title">Iron Peak Fitness</h3>
+                    <p class="work-desc">A comprehensive gym website containing class schedules, trainer profiles, tiered membership plans, transformations gallery, and FAQ accordion.</p>
+                    <div class="work-features">
+                        <span class="feature-tag">8 Pages</span>
+                        <span class="feature-tag">Class Schedule</span>
+                        <span class="feature-tag">Membership Plans</span>
+                        <span class="feature-tag">Trainer Profiles</span>
+                        <span class="feature-tag">FAQ Accordion</span>
+                    </div>
+                </div>
+                <a href="https://iironpeakfitness-gym.vercel.app" target="_blank" rel="noopener" class="work-link">Live Demo →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <p class="section-label">What I Offer</p>
+        <h2 class="section-title">Services</h2>
+
+        <div class="services-grid">
+            <div class="service-cell">
+                <p class="service-num">01</p>
+                <h3 class="service-name">Custom Website Design</h3>
+                <p class="service-desc">Built from scratch to match your brand. Mobile-first, fast-loading, and optimized for search engines. Every page designed with a purpose.</p>
+                <p class="service-price">₹10,000 – ₹25,000</p>
+            </div>
+            <div class="service-cell">
+                <p class="service-num">02</p>
+                <h3 class="service-name">Template Customization</h3>
+                <p class="service-desc">Take an existing template and make it yours. I rework the colors, copy, layout, and features to fit your business exactly.</p>
+                <p class="service-price">₹8,000 – ₹15,000</p>
+            </div>
+            <div class="service-cell">
+                <p class="service-num">03</p>
+                <h3 class="service-name">Monthly Maintenance</h3>
+                <p class="service-desc">Ongoing support for content updates, performance fixes, and keeping your site healthy and secure month after month.</p>
+                <p class="service-price">₹2,000 – ₹5,000/mo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing">
+        <div class="pricing-header-wrap">
+            <div>
+                <p class="section-label">Transparent Pricing</p>
+                <h2 class="section-title">Packages</h2>
+            </div>
+            <div class="pricing-toggle">
+                <button class="toggle-btn active" id="toggleINR" onclick="showINR()">₹ India</button>
+                <button class="toggle-btn" id="toggleUSD" onclick="showUSD()">$ International</button>
+            </div>
+        </div>
+
+        <div class="pricing-plans">
+
+            <div class="plan-card">
+                <p class="plan-badge">Starter</p>
+                <h3 class="plan-name">Basic Plan</h3>
+                <p class="plan-price-inr">₹10,000</p>
+                <p class="plan-price-usd">$500</p>
+                <p class="plan-delivery">3–5 day delivery</p>
+                <ul class="plan-features">
+                    <li>5-page website</li>
+                    <li>Contact form</li>
+                    <li>Mobile responsive</li>
+                    <li>1 revision round</li>
+                </ul>
+                <a href="#contact" class="plan-cta">Get Started</a>
+            </div>
+
+            <div class="plan-card featured">
+                <p class="plan-badge">Most Popular</p>
+                <h3 class="plan-name">Standard Plan</h3>
+                <p class="plan-price-inr">₹18,000</p>
+                <p class="plan-price-usd">$750</p>
+                <p class="plan-delivery">3 day delivery</p>
+                <ul class="plan-features">
+                    <li>8-page website</li>
+                    <li>Contact form + Google Maps</li>
+                    <li>SEO optimized</li>
+                    <li>2 revision rounds</li>
+                </ul>
+                <a href="#contact" class="plan-cta">Get Started</a>
+            </div>
+
+            <div class="plan-card">
+                <p class="plan-badge">Full Build</p>
+                <h3 class="plan-name">Premium Plan</h3>
+                <p class="plan-price-inr">₹25,000</p>
+                <p class="plan-price-usd">$1,000</p>
+                <p class="plan-delivery">2 day delivery</p>
+                <ul class="plan-features">
+                    <li>Unlimited pages</li>
+                    <li>Booking / appointment system</li>
+                    <li>Monthly maintenance included</li>
+                    <li>Unlimited revisions</li>
+                </ul>
+                <a href="#contact" class="plan-cta">Get Started</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <p class="section-label">About</p>
+
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem;">I'm Haris.<br>Web Developer.<br>Problem Solver.</h2>
+
+                <p>I'm a Computer Science student who builds websites for small businesses — the kind that look professional, load fast, and actually help owners get more customers.</p>
+
+                <p>I started freelancing because most small businesses in Chennai either had no website, or had one that looked like it was built in 2009. There's a real gap there. I'm filling it.</p>
+
+                <p>Every site I build is hand-coded — no page builders, no bloated templates — just clean HTML, CSS, and JavaScript that you can actually own and understand.</p>
+
+                <div class="skills-label">Skills</div>
+                <div class="skills-row">
+                    <span class="skill-chip">HTML</span>
+                    <span class="skill-chip">CSS</span>
+                    <span class="skill-chip">JavaScript</span>
+                    <span class="skill-chip">Responsive Design</span>
+                    <span class="skill-chip">SEO Basics</span>
+                    <span class="skill-chip">Schema.org</span>
+                    <span class="skill-chip">Git</span>
+                    <span class="skill-chip">Vercel</span>
+                </div>
+
+                <div class="skills-label">Tools</div>
+                <div class="skills-row">
+                    <span class="skill-chip">VSCode</span>
+                    <span class="skill-chip">Figma</span>
+                    <span class="skill-chip">Git</span>
+                    <span class="skill-chip">Vercel</span>
+                </div>
+            </div>
+
+            <div class="currently">
+                <h3>Currently</h3>
+                <ul class="currently-list">
+                    <li>Building websites for small businesses in Chennai</li>
+                    <li>Learning React and moving into dynamic sites</li>
+                    <li>Helping local businesses establish their first online presence</li>
+                    <li>Finishing my CS degree (somehow)</li>
+                    <li>Open to freelance projects — local and international</li>
                 </ul>
             </div>
-
-            <!-- Desktop CTA Button -->
-            <div class="nav-actions-desktop">
-                <a href="appointment.html" class="btn-appointment">Book Appointment</a>
-            </div>
-
-            <!-- Hamburger Button for Mobile -->
-            <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <span class="hero-badge"><i class="fas fa-star" style="color: #E8B86B; margin-right: 6px;"></i> Trusted Family Dentistry</span>
-                <h1>Advanced Dental Care That Makes You <span class="highlight">Smile</span></h1>
-                <p class="hero-subheadline">Experience gentle, pain-free treatments in a modern clinic. Over 5,000 happy patients and counting.</p>
-                <div class="hero-buttons">
-                    <a href="appointment.html" class="btn-primary">Book Appointment &rarr;</a>
-                    <a href="tel:5551234567" class="btn-secondary"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Call (555) 123-4567</a>
-                </div>
-                <div class="hero-trust">
-                    <span><i class="fas fa-star" style="color: #E8B86B; margin-right: 4px;"></i><i class="fas fa-star" style="color: #E8B86B; margin-right: 4px;"></i><i class="fas fa-star" style="color: #E8B86B; margin-right: 4px;"></i><i class="fas fa-star" style="color: #E8B86B; margin-right: 4px;"></i><i class="fas fa-star" style="color: #E8B86B; margin-right: 6px;"></i> 500+ 5-Star Reviews</span>
-                    <span><i class="fas fa-tooth" style="color: #0A6E6E; margin-right: 6px;"></i>15+ Years Experience</span>
-                    <span><i class="fas fa-trophy" style="color: #E8B86B; margin-right: 6px;"></i>Award-Winning Care</span>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-image-placeholder">
-                    <img src="images/photo-1629909613654-28e377c37b09.avif" alt="SmileBright Dental Clinic" style="width:100%; border-radius:20px; object-fit:cover;">
-                </div>
-            </div>
-        </section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="contact-wrap">
+            <div class="contact-intro">
+                <p class="section-label">Contact</p>
+                <h2>Let's Build Something.</h2>
+                <p>Have a project in mind? I'd love to hear about it. Fill out the form or reach out directly — I respond within 24 hours.</p>
 
-        <section class="about-section">
-            <div class="about-container">
-                <div class="about-content">
-                    <span class="section-badge">About Us</span>
-                    <h2>Gentle Dentistry for <span class="highlight">Generations</span></h2>
-                    <p class="about-subhead">Serving families with compassion, technology, and expertise since 2010.</p>
-                    <div class="about-text">
-                        <p>At SmileBright Dental, we believe everyone deserves a healthy, confident smile. Our clinic combines state-of-the-art technology with a warm, welcoming environment to make every visit comfortable.</p>
-                        <p>We're proud to be the trusted choice for families in our community, offering everything from routine cleanings to advanced cosmetic procedures.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">5,000+</span>
-                            <span class="stat-label">Happy Patients</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Would Recommend</span>
-                        </div>
-                    </div>
-                    <a href="about.html" class="btn-outline">Learn More About Us →</a>
+                <div class="contact-meta">
+                    <a href="mailto:asadcache@gmail.com">
+                        <span>✉</span>asadcache@gmail.com
+                    </a>
+                    <a href="https://wa.me/919092243567" target="_blank" rel="noopener">
+                        <span>✦</span>WhatsApp: +91 9092243567
+                    </a>
+                    <a href="tel:+919092243567">
+                        <span>☎</span>Phone: +91 9092243567
+                    </a>
                 </div>
-                <div class="about-image">
-                    <div class="about-image-placeholder">
-                        <img src="images/photo-1606811971618-4486d14f3f99.avif" alt="SmileBright Dental Clinic" style="width:100%; border-radius:20px; object-fit:cover;">
+
+                <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--dim); letter-spacing: 0.08em; line-height: 1.8;">
+                    BASED IN CHENNAI, INDIA<br>
+                    AVAILABLE FOR REMOTE PROJECTS WORLDWIDE
+                </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cName">Name</label>
+                        <input type="text" id="cName" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="cEmail">Email</label>
+                        <input type="email" id="cEmail" placeholder="your@email.com" required>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="services-section">
-            <div class="services-header">
-                <span class="section-badge">Our Services</span>
-                <h2>Comprehensive Dental Care <span class="highlight">For Everyone</span></h2>
-                <p>From routine checkups to complete smile makeovers, we've got you covered.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
-                    <h3>General Dentistry</h3>
-                    <p>Regular checkups, cleanings, fillings, and preventive care for all ages.</p>
-                    <a href="services.html#general" class="service-link">Learn More →</a>
+                <div class="form-field">
+                    <label for="cProject">Project Type</label>
+                    <select id="cProject">
+                        <option value="">Select project type</option>
+                        <option>New Website (Custom)</option>
+                        <option>Template Customization</option>
+                        <option>Website Redesign</option>
+                        <option>Monthly Maintenance</option>
+                        <option>Other</option>
+                    </select>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-star"></i></div>
-                    <h3>Cosmetic Dentistry</h3>
-                    <p>Teeth whitening, veneers, bonding, and smile makeovers.</p>
-                    <a href="services.html#cosmetic" class="service-link">Learn More →</a>
+                <div class="form-field">
+                    <label for="cMessage">Message</label>
+                    <textarea id="cMessage" placeholder="Tell me about your project — what it is, what you need, and when..." required></textarea>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-tooth"></i></div>
-                    <h3>Root Canals</h3>
-                    <p>Pain-free root canal therapy to save your natural teeth.</p>
-                    <a href="services.html#root-canal" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-baby"></i></div>
-                    <h3>Pediatric Dentistry</h3>
-                    <p>Gentle, kid-friendly dental care for children of all ages.</p>
-                    <a href="services.html#pediatric" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-smile"></i></div>
-                    <h3>Invisalign</h3>
-                    <p>Clear aligners for straight teeth without metal braces.</p>
-                    <a href="services.html#invisalign" class="service-link">Learn More →</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-ambulance"></i></div>
-                    <h3>Emergency Care</h3>
-                    <p>Same-day appointments for dental emergencies.</p>
-                    <a href="services.html#emergency" class="service-link">Learn More →</a>
-                </div>
-            </div>
-            <div class="services-cta">
-                <a href="services.html" class="btn-primary">View All Services →</a>
-            </div>
-        </section>
-
-        <section class="testimonials-section">
-            <div class="testimonials-header">
-                <span class="section-badge">Testimonials</span>
-                <h2>What Our <span class="highlight">Patients Say</span></h2>
-                <p>Real stories from real smiles in our community</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Dr. Chen and his team are amazing! I used to be terrified of the dentist, but they made me feel so comfortable. Best dental experience I've ever had."</p>
-                    <div class="testimonial-author">
-                        <strong>Sarah Johnson</strong>
-                        <span>Invisalign Patient</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Took my 4-year-old for her first dental visit. The staff was so patient and gentle. She actually ASKED to come back!"</p>
-                    <div class="testimonial-author">
-                        <strong>Michael Rodriguez</strong>
-                        <span>Parent</span>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Emergency root canal on a Saturday? They got me in within 2 hours. Pain-free and professional. Highly recommend!"</p>
-                    <div class="testimonial-author">
-                        <strong>Emily Thompson</strong>
-                        <span>Emergency Patient</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonials-cta">
-                <a href="testimonials.html" class="btn-outline">Read More Reviews →</a>
-            </div>
-        </section>
-    </main>
-
-    <a href="appointment.html" class="floating-widget">
-        <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Emergency? Same-Day Appointments Available
-    </a>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>SmileBright Dental</h3>
-                <p>Advanced dentistry with a gentle touch since 2010.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="appointment.html">Book Appointment</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt" style="color: #E8B86B; margin-right: 8px;"></i>123 Dental Avenue, Smile City, CA 90210</p>
-                <p><i class="fas fa-phone" style="color: #E8B86B; margin-right: 8px;"></i>(555) 123-4567</p>
-                <p><i class="fas fa-envelope" style="color: #E8B86B; margin-right: 8px;"></i>hello@smilebright.com</p>
-            </div>
-            <div class="footer-column">
-                <h3>Hours</h3>
-                <p>Mon-Fri: 9am-6pm<br>Sat: 9am-2pm<br>Sun: Closed</p>
-            </div>
+                <button type="submit" class="form-submit">Send Message →</button>
+            </form>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 SmileBright Dental. All rights reserved.</p>
-        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-left">© 2026 HARIS. All rights reserved.</p>
+        <p class="footer-tagline">Stay Building.</p>
     </footer>
+
+    <script>
+        // ── Hamburger ──
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+            document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ── Currency toggle ──
+        function showINR() {
+            document.body.classList.remove('show-usd');
+            document.getElementById('toggleINR').classList.add('active');
+            document.getElementById('toggleUSD').classList.remove('active');
+        }
+
+        function showUSD() {
+            document.body.classList.add('show-usd');
+            document.getElementById('toggleUSD').classList.add('active');
+            document.getElementById('toggleINR').classList.remove('active');
+        }
+
+        // ── Contact form ──
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name  = document.getElementById('cName').value.trim();
+            const email = document.getElementById('cEmail').value.trim();
+            const msg   = document.getElementById('cMessage').value.trim();
+
+            if (!name || !email || !msg) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Open WhatsApp API with pre-filled content
+            const project = document.getElementById('cProject').value || 'Not specified';
+            const text = 'Name: ' + name + '\nEmail: ' + email + '\nProject: ' + project + '\nMessage: ' + msg;
+            const whatsappUrl = 'https://wa.me/919092243567?text=' + encodeURIComponent(text);
+            window.open(whatsappUrl, '_blank');
+
+            this.reset();
+        });
+    </script>
 </body>
 </html>

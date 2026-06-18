@@ -3,52 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our comprehensive dental services including general dentistry, cosmetic treatments, root canals, pediatric care, Invisalign, and emergency services.">
+    <meta name="description" content="Explore web developer services and transparent pricing plans. Custom designs, template customizations, and monthly maintenance packages starting from ₹10,000.">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "DentalClinic",
-        "name": "SmileBright Dental",
-        "image": "https://images.unsplash.com/photo-1629909613654-28e377c37b09",
+        "@type": "ProfessionalService",
+        "name": "[Your Name] Web Solutions",
+        "image": "images/laptop-coding-desk.jpg",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Dental Avenue",
-            "addressLocality": "Smile City",
-            "addressRegion": "CA",
-            "postalCode": "90210"
+            "addressLocality": "Chennai",
+            "addressRegion": "Tamil Nadu",
+            "addressCountry": "IN"
         },
-        "telephone": "(555) 123-4567",
-        "openingHours": "Mo-Fr 09:00-18:00, Sa 09:00-14:00",
-        "priceRange": "$$"
+        "priceRange": "INR"
     }
     </script>
-    <title>Our Dental Services - SmileBright Dental</title>
+    <title>Services & Pricing - [Your Name] Web Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
+    <style>
+        .pricing-section {
+            padding: 5rem 5%;
+            background-color: #F8F9FA;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pricing-switcher-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .pricing-switcher {
+            display: flex;
+            background: #FFFFFF;
+            padding: 0.3rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .pricing-switcher button {
+            background: transparent;
+            border: none;
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #6C757D;
+        }
+        .pricing-switcher button.active {
+            background: #1E3A5F;
+            color: #FFFFFF;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .pricing-card {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(10, 110, 110, 0.1);
+        }
+        .pricing-card.popular {
+            border-color: #0A6E6E;
+        }
+        .pricing-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0A6E6E;
+            color: #FFFFFF;
+            padding: 0.3rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .pricing-header {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .pricing-package-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1E3A5F;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+        .pricing-features {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+        .pricing-features li {
+            padding: 0.6rem 0;
+            font-size: 0.95rem;
+            color: #6C757D;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        .pricing-features li i {
+            color: #0A6E6E;
+            font-size: 1rem;
+        }
+        .pricing-btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .pricing-btn-primary {
+            background: #0A6E6E;
+            color: #FFFFFF;
+        }
+        .pricing-btn-primary:hover {
+            background: #074e4e;
+        }
+        .pricing-btn-outline {
+            background: transparent;
+            border: 2px solid #0A6E6E;
+            color: #0A6E6E;
+        }
+        .pricing-btn-outline:hover {
+            background: #0A6E6E;
+            color: #FFFFFF;
+        }
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Same navbar structure as index.html -->
+    <!-- Responsive Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">SmileBright</a>
+            <a href="index.html" class="logo">[Your Name]</a>
             <div class="nav-menu" id="navMenu">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="meet-dentist.html" class="nav-link">Meet Dentist</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
                     <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
                     <li><a href="faq.html" class="nav-link">FAQ</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="mobile-only"><a href="appointment.html" class="btn-appointment">Book Appointment</a></li>
+                    <li class="mobile-only"><a href="contact.html" class="btn-appointment">Hire Me</a></li>
                 </ul>
             </div>
             <div class="nav-actions-desktop">
-                <a href="appointment.html" class="btn-appointment">Book Appointment</a>
+                <a href="contact.html" class="btn-appointment">Hire Me</a>
             </div>
             <button class="hamburger-menu" id="hamburgerBtn" aria-label="Toggle navigation">
                 <span class="bar"></span>
@@ -61,144 +203,253 @@
     <main>
         <section class="page-header">
             <div class="page-header-content">
-                <h1>Our Dental Services</h1>
-                <p>Comprehensive care for your entire family</p>
+                <h1>Services & Pricing</h1>
+                <p>High-performance web solutions structured to suit your business requirements and budget</p>
             </div>
         </section>
 
+        <!-- Services Detailed Section -->
         <section class="services-detailed">
             <div class="services-detailed-container">
-                <div id="general" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-tooth" style="color: #0A6E6E;"></i></div>
+                <!-- Custom Website Design -->
+                <div id="custom-design" class="service-detailed-card">
+                    <div class="service-detailed-icon"><i class="fas fa-laptop-code" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
-                        <h2>General Dentistry</h2>
-                        <p>Regular dental checkups and cleanings are the foundation of good oral health. Our comprehensive general dentistry services include:</p>
+                        <h2>Custom Website Design</h2>
+                        <p>Get a completely custom website designed and developed from scratch. This is perfect for businesses looking to establish a highly professional, unique identity. I write clean, custom HTML, CSS, and JS code to ensure peak performance and design flexibility.</p>
                         <ul>
-                            <li>Comprehensive oral exams</li>
-                            <li>Professional teeth cleaning</li>
-                            <li>Digital X-rays</li>
-                            <li>Fillings and restorations</li>
-                            <li>Gum disease treatment</li>
+                            <li>Bespoke designs customized for your target audience</li>
+                            <li>Mobile-responsive layouts optimized for all screens</li>
+                            <li>Lead capture contact forms and interactive elements</li>
+                            <li>Standard SEO setup (meta tags, semantic HTML)</li>
+                            <li>Integration with Google Analytics and Search Console</li>
                         </ul>
-                        <div class="service-price">Starting from $89</div>
-                        <a href="appointment.html" class="btn-outline">Book General Checkup &rarr;</a>
+                        <div class="service-price">₹10,000 - ₹25,000 / $500 - $1,000</div>
+                        <a href="contact.html?service=custom" class="btn-outline">Order Custom Design &rarr;</a>
                     </div>
                 </div>
 
-                <div id="cosmetic" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-star" style="color: #E8B86B;"></i></div>
+                <!-- Template Customization -->
+                <div id="template-customization" class="service-detailed-card">
+                    <div class="service-detailed-icon"><i class="fas fa-palette" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
-                        <h2>Cosmetic Dentistry</h2>
-                        <p>Transform your smile with our advanced cosmetic treatments designed to boost your confidence.</p>
+                        <h2>Template Customization</h2>
+                        <p>Already have a theme or a template you love? I will customize it to align with your logo, fonts, branding colors, and company content. This is a budget-friendly option that gets your business online quickly.</p>
                         <ul>
-                            <li>Professional teeth whitening</li>
-                            <li>Porcelain veneers</li>
-                            <li>Dental bonding</li>
-                            <li>Complete smile makeovers</li>
+                            <li>Logo integration and custom branding color matching</li>
+                            <li>Content formatting (images, text layouts, pricing tables)</li>
+                            <li>Contact form configuration and maps integration</li>
+                            <li>Third-party plugin configurations</li>
                         </ul>
-                        <div class="service-price">From $199</div>
-                        <a href="appointment.html" class="btn-outline">Book Consultation &rarr;</a>
+                        <div class="service-price">₹8,000 - ₹15,000 / $400 - $750</div>
+                        <a href="contact.html?service=template" class="btn-outline">Order Customization &rarr;</a>
                     </div>
                 </div>
 
-                <div id="root-canal" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-tooth" style="color: #0A6E6E;"></i></div>
+                <!-- Monthly Maintenance -->
+                <div id="monthly-maintenance" class="service-detailed-card">
+                    <div class="service-detailed-icon"><i class="fas fa-tools" style="color: #0A6E6E;"></i></div>
                     <div class="service-detailed-content">
-                        <h2>Root Canal Therapy</h2>
-                        <p>Pain-free root canal treatment to save infected teeth and relieve discomfort.</p>
+                        <h2>Monthly Maintenance</h2>
+                        <p>Keep your website secure, updated, and performing at its best without any stress. Focus on your business while I handle the technical aspects of keeping your site fresh and operational.</p>
                         <ul>
-                            <li>Pain management techniques</li>
-                            <li>Single-visit root canals</li>
-                            <li>Same-day crown placement</li>
+                            <li>Regular content edits (updating images, texts, blogs)</li>
+                            <li>Technical support and bug resolution</li>
+                            <li>Weekly performance audits and speed checks</li>
+                            <li>Security scanning and website backups</li>
+                            <li>Domain and hosting renewal management support</li>
                         </ul>
-                        <div class="service-price">From $450</div>
-                        <a href="appointment.html" class="btn-outline">Book Root Canal &rarr;</a>
+                        <div class="service-price">₹2,000 - ₹5,000 / month</div>
+                        <a href="contact.html?service=maintenance" class="btn-outline">Order Maintenance &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <div class="pricing-container">
+                <div class="services-header">
+                    <span class="section-badge">Pricing Packages</span>
+                    <h2>Transparent <span class="highlight">Plans</span></h2>
+                    <p>Select the plan that fits your growth strategy. Easily toggle between domestic and international currencies.</p>
+                </div>
+
+                <!-- Currency Switcher Tab -->
+                <div class="pricing-switcher-wrapper">
+                    <div class="pricing-switcher">
+                        <button id="btn-inr" class="active" onclick="toggleCurrency('inr')">Indian Clients (₹)</button>
+                        <button id="btn-usd" onclick="toggleCurrency('usd')">International Clients ($)</button>
                     </div>
                 </div>
 
-                <div id="pediatric" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-baby" style="color: #0A6E6E;"></i></div>
-                    <div class="service-detailed-content">
-                        <h2>Pediatric Dentistry</h2>
-                        <p>Creating positive dental experiences for children that last a lifetime.</p>
-                        <ul>
-                            <li>First dental visits (age 1+)</li>
-                            <li>Sealants and fluoride treatments</li>
-                            <li>Gentle, kid-friendly approach</li>
-                            <li>Early orthodontic assessments</li>
+                <!-- Indian Clients (INR) Pricing Grid -->
+                <div id="pricing-grid-inr" class="pricing-grid">
+                    <!-- Basic Pack -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Basic Package</div>
+                            <div class="pricing-price">₹10,000</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Ideal for start-ups needing a quick web presence</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5-Page Website</li>
+                            <li><i class="fas fa-check"></i> Contact Form</li>
+                            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                            <li><i class="fas fa-check"></i> 3-5 Days Delivery</li>
+                            <li><i class="fas fa-check"></i> Basic SEO Optimization</li>
                         </ul>
-                        <div class="service-price">From $75</div>
-                        <a href="appointment.html" class="btn-outline">Book Child's Visit &rarr;</a>
+                        <a href="contact.html?package=basic_inr" class="pricing-btn pricing-btn-outline">Get Started</a>
+                    </div>
+
+                    <!-- Standard Pack -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Standard Package</div>
+                            <div class="pricing-price">₹18,000</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Great for established small businesses</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 8-Page Website</li>
+                            <li><i class="fas fa-check"></i> Contact Form + Google Maps</li>
+                            <li><i class="fas fa-check"></i> SEO Optimized Structures</li>
+                            <li><i class="fas fa-check"></i> 3 Days Express Delivery</li>
+                            <li><i class="fas fa-check"></i> 1 Month Free Support</li>
+                        </ul>
+                        <a href="contact.html?package=standard_inr" class="pricing-btn pricing-btn-primary">Choose Standard</a>
+                    </div>
+
+                    <!-- Premium Pack -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Premium Package</div>
+                            <div class="pricing-price">₹25,000</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Perfect for businesses needing booking & automation</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                            <li><i class="fas fa-check"></i> Booking/Appointment System</li>
+                            <li><i class="fas fa-check"></i> Monthly Maintenance Included</li>
+                            <li><i class="fas fa-check"></i> 2 Days Delivery</li>
+                            <li><i class="fas fa-check"></i> Priority Support & Backups</li>
+                        </ul>
+                        <a href="contact.html?package=premium_inr" class="pricing-btn pricing-btn-outline">Get Premium</a>
                     </div>
                 </div>
 
-                <div id="invisalign" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-smile" style="color: #0A6E6E;"></i></div>
-                    <div class="service-detailed-content">
-                        <h2>Invisalign Clear Aligners</h2>
-                        <p>Straighten your teeth discreetly with virtually invisible aligners.</p>
-                        <ul>
-                            <li>Free initial consultation</li>
-                            <li>3D digital treatment planning</li>
-                            <li>Flexible payment plans</li>
+                <!-- International Clients (USD) Pricing Grid -->
+                <div id="pricing-grid-usd" class="pricing-grid" style="display: none;">
+                    <!-- Basic Pack -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Basic Package</div>
+                            <div class="pricing-price">$500</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Ideal for start-ups needing a quick web presence</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5-Page Website</li>
+                            <li><i class="fas fa-check"></i> Contact Form</li>
+                            <li><i class="fas fa-check"></i> Mobile Responsive</li>
+                            <li><i class="fas fa-check"></i> 3-5 Days Delivery</li>
+                            <li><i class="fas fa-check"></i> Basic SEO Optimization</li>
                         </ul>
-                        <div class="service-price">From $2,500</div>
-                        <a href="appointment.html" class="btn-outline">Book Invisalign Consult &rarr;</a>
+                        <a href="contact.html?package=basic_usd" class="pricing-btn pricing-btn-outline">Get Started</a>
                     </div>
-                </div>
 
-                <div id="emergency" class="service-detailed-card">
-                    <div class="service-detailed-icon"><i class="fas fa-ambulance" style="color: #0A6E6E;"></i></div>
-                    <div class="service-detailed-content">
-                        <h2>Emergency Dental Care</h2>
-                        <p>Same-day appointments for dental emergencies, including evenings and weekends.</p>
-                        <ul>
-                            <li>Severe tooth pain</li>
-                            <li>Broken or knocked-out teeth</li>
-                            <li>Lost fillings or crowns</li>
-                            <li>Abscesses and infections</li>
+                    <!-- Standard Pack -->
+                    <div class="pricing-card popular">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Standard Package</div>
+                            <div class="pricing-price">$750</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Great for established small businesses</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 8-Page Website</li>
+                            <li><i class="fas fa-check"></i> Contact Form + Google Maps</li>
+                            <li><i class="fas fa-check"></i> SEO Optimized Structures</li>
+                            <li><i class="fas fa-check"></i> 3 Days Express Delivery</li>
+                            <li><i class="fas fa-check"></i> 1 Month Free Support</li>
                         </ul>
-                        <div class="service-price">Emergency fee: $149</div>
-                        <a href="tel:5551234567" class="btn-outline">Call Now: (555) 123-4567 &rarr;</a>
+                        <a href="contact.html?package=standard_usd" class="pricing-btn pricing-btn-primary">Choose Standard</a>
+                    </div>
+
+                    <!-- Premium Pack -->
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-package-name">Premium Package</div>
+                            <div class="pricing-price">$1,000</div>
+                            <p style="color: #6C757D; font-size: 0.9rem;">Perfect for businesses needing booking & automation</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                            <li><i class="fas fa-check"></i> Booking/Appointment System</li>
+                            <li><i class="fas fa-check"></i> Monthly Maintenance Included</li>
+                            <li><i class="fas fa-check"></i> 2 Days Delivery</li>
+                            <li><i class="fas fa-check"></i> Priority Support & Backups</li>
+                        </ul>
+                        <a href="contact.html?package=premium_usd" class="pricing-btn pricing-btn-outline">Get Premium</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="appointment.html" class="floating-widget">
-        <i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i>Emergency? Same-Day Appointments Available
+    <!-- Floating Widget for Contacting via WhatsApp -->
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-widget" style="display: flex; align-items: center; gap: 8px;">
+        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Chat on WhatsApp
     </a>
 
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-column">
-                <h3>SmileBright Dental</h3>
-                <p>Advanced dentistry with a gentle touch since 2010.</p>
+                <h3>[Your Name] Web Solutions</h3>
+                <p>Professional websites that grow your business. Chennai, India.</p>
             </div>
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="services.html">Services & Pricing</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Contact</h3>
-                <p><i class="fas fa-map-marker-alt" style="color: #E8B86B; margin-right: 8px;"></i>123 Dental Avenue, Smile City, CA 90210</p>
-                <p><i class="fas fa-phone" style="color: #E8B86B; margin-right: 8px;"></i>(555) 123-4567</p>
-                <p><i class="fas fa-envelope" style="color: #E8B86B; margin-right: 8px;"></i>hello@smilebright.com</p>
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Chennai, India</p>
+                <p><i class="fas fa-phone" style="margin-right: 8px;"></i>+91 98765 43210</p>
+                <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>hello@yourname.com</p>
             </div>
             <div class="footer-column">
-                <h3>Hours</h3>
-                <p>Mon-Fri: 9am-6pm<br>Sat: 9am-2pm<br>Sun: Closed</p>
+                <h3>Response Time</h3>
+                <p>Available for freelance work. Responding within 24 hours.</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 SmileBright Dental. All rights reserved.</p>
+            <p>&copy; 2026 [Your Name] Web Solutions. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function toggleCurrency(currency) {
+            const gridInr = document.getElementById('pricing-grid-inr');
+            const gridUsd = document.getElementById('pricing-grid-usd');
+            const btnInr = document.getElementById('btn-inr');
+            const btnUsd = document.getElementById('btn-usd');
+
+            if (currency === 'inr') {
+                gridInr.style.display = 'grid';
+                gridUsd.style.display = 'none';
+                btnInr.classList.add('active');
+                btnUsd.classList.remove('active');
+            } else {
+                gridInr.style.display = 'none';
+                gridUsd.style.display = 'grid';
+                btnInr.classList.remove('active');
+                btnUsd.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>

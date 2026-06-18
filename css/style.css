@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    color: #2C3E50;
+    color: #212529;
     background-color: #FFFFFF;
     line-height: 1.6;
     padding-top: 80px;
@@ -37,7 +37,7 @@ body {
 
 /* Logo Styling */
 .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: #0A6E6E;
@@ -58,7 +58,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #2C3E50;
+    color: #212529;
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.3s ease;
@@ -105,7 +105,7 @@ body {
 .hero-placeholder {
     min-height: 500px;
     height: 80vh;
-    background: linear-gradient(135deg, #F5F0E8 0%, #EADEC9 100%);
+    background: linear-gradient(135deg, #F8F9FA 0%, #EADEC9 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +115,7 @@ body {
 }
 
 .hero-placeholder h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 3rem;
     color: #0A6E6E;
     margin-bottom: 1rem;
@@ -123,7 +123,7 @@ body {
 
 .hero-placeholder p {
     font-size: 1.2rem;
-    color: #5D6D7E;
+    color: #6C757D;
     max-width: 600px;
 }
 
@@ -189,7 +189,7 @@ body {
     .hamburger-menu .bar {
         width: 25px;
         height: 3px;
-        background: #2C3E50;
+        background: #1E3A5F;
         border-radius: 3px;
         transition: all 0.3s;
     }
@@ -234,7 +234,7 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     gap: 4rem;
-    background: linear-gradient(135deg, #FFFFFF 0%, #F5F0E8 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
 }
 
 .hero-content {
@@ -243,8 +243,8 @@ body {
 
 .hero-badge {
     display: inline-block;
-    background: rgba(232, 184, 107, 0.15);
-    color: #E8B86B;
+    background: rgba(10, 110, 110, 0.15);
+    color: #0A6E6E;
     padding: 0.5rem 1.2rem;
     border-radius: 50px;
     font-size: 0.85rem;
@@ -254,11 +254,11 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.2rem;
-    color: #2C3E50;
+    color: #212529;
 }
 
 .hero .highlight {
@@ -280,7 +280,7 @@ body {
 
 .hero-subheadline {
     font-size: 1.1rem;
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.6;
     margin-bottom: 2rem;
     max-width: 90%;
@@ -334,7 +334,7 @@ body {
     padding-top: 1rem;
     border-top: 1px solid rgba(0,0,0,0.05);
     font-size: 0.9rem;
-    color: #5D6D7E;
+    color: #6C757D;
     flex-wrap: wrap;
 }
 
@@ -346,7 +346,7 @@ body {
 }
 
 .hero-image-placeholder {
-    background: linear-gradient(135deg, #0A6E6E10, #E8B86B10);
+    background: linear-gradient(135deg, #1E3A5F10, #0A6E6E10);
     border-radius: 30px;
     width: 100%;
     min-height: 400px;
@@ -367,7 +367,7 @@ body {
 
 .hero-image-placeholder small {
     font-size: 0.8rem;
-    color: #5D6D7E;
+    color: #6C757D;
 }
 
 /* Floating Widget */
@@ -447,8 +447,8 @@ body {
 /* Section Badge */
 .section-badge {
     display: inline-block;
-    background: rgba(232, 184, 107, 0.15);
-    color: #E8B86B;
+    background: rgba(10, 110, 110, 0.15);
+    color: #0A6E6E;
     padding: 0.4rem 1rem;
     border-radius: 50px;
     font-size: 0.8rem;
@@ -460,7 +460,7 @@ body {
 /* About Section */
 .about-section {
     padding: 5rem 5%;
-    background: #F5F0E8;
+    background: #F8F9FA;
 }
 
 .about-container {
@@ -476,9 +476,9 @@ body {
 }
 
 .about-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1rem;
 }
 
@@ -488,13 +488,13 @@ body {
 
 .about-subhead {
     font-size: 1.1rem;
-    color: #5D6D7E;
+    color: #6C757D;
     margin-bottom: 1.5rem;
     font-weight: 500;
 }
 
 .about-text {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -523,7 +523,7 @@ body {
 
 .stat-label {
     font-size: 0.85rem;
-    color: #5D6D7E;
+    color: #6C757D;
 }
 
 .btn-outline {
@@ -547,7 +547,7 @@ body {
 }
 
 .about-image-placeholder {
-    background: linear-gradient(135deg, #0A6E6E10, #E8B86B10);
+    background: linear-gradient(135deg, #1E3A5F10, #0A6E6E10);
     border-radius: 30px;
     min-height: 400px;
     display: flex;
@@ -561,7 +561,7 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #0A6E6E, #055252);
+    background: linear-gradient(135deg, #1E3A5F, #0A6E6E);
     color: white;
     text-align: center;
     padding: 4rem 5%;
@@ -570,7 +570,7 @@ body {
 }
 
 .page-header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
@@ -593,7 +593,7 @@ body {
 }
 
 .doctor-image-placeholder {
-    background: linear-gradient(135deg, #0A6E6E10, #E8B86B10);
+    background: linear-gradient(135deg, #1E3A5F10, #0A6E6E10);
     border-radius: 30px;
     min-height: 450px;
     display: flex;
@@ -609,14 +609,14 @@ body {
 }
 
 .doctor-info h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1.5rem;
 }
 
 .doctor-info p {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -626,7 +626,7 @@ body {
 }
 
 .credentials h3, .specialties h3 {
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -638,7 +638,7 @@ body {
 
 .credentials li {
     margin-bottom: 0.5rem;
-    color: #5D6D7E;
+    color: #6C757D;
 }
 
 .specialty-tags {
@@ -688,9 +688,9 @@ body {
 }
 
 .services-header h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1rem;
 }
 
@@ -699,7 +699,7 @@ body {
 }
 
 .services-header p {
-    color: #5D6D7E;
+    color: #6C757D;
     font-size: 1.1rem;
 }
 
@@ -733,12 +733,12 @@ body {
 
 .service-card h3 {
     font-size: 1.3rem;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1rem;
 }
 
 .service-card p {
-    color: #5D6D7E;
+    color: #6C757D;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -796,13 +796,13 @@ body {
 }
 
 .service-detailed-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     color: #0A6E6E;
     margin-bottom: 1rem;
 }
 
 .service-detailed-content p {
-    color: #5D6D7E;
+    color: #6C757D;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -814,7 +814,7 @@ body {
 }
 
 .service-detailed-content li {
-    color: #5D6D7E;
+    color: #6C757D;
     padding: 0.3rem 0;
     padding-left: 1.5rem;
     position: relative;
@@ -866,7 +866,7 @@ body {
 /* Testimonials Section */
 .testimonials-section {
     padding: 5rem 5%;
-    background: linear-gradient(135deg, #F5F0E8 0%, #FFFFFF 100%);
+    background: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
 }
 
 .testimonials-header {
@@ -875,9 +875,9 @@ body {
 }
 
 .testimonials-header h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 1rem;
 }
 
@@ -905,13 +905,13 @@ body {
 }
 
 .testimonial-stars {
-    color: #E8B86B;
+    color: #0A6E6E;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .testimonial-text {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.7;
     margin-bottom: 1.5rem;
     font-style: italic;
@@ -924,7 +924,7 @@ body {
 
 .testimonial-author strong {
     display: block;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 0.25rem;
 }
 
@@ -989,12 +989,12 @@ body {
     padding: 1.2rem 1.5rem;
     cursor: pointer;
     font-weight: 600;
-    color: #2C3E50;
+    color: #212529;
     transition: background 0.3s;
 }
 
 .faq-question:hover {
-    background: #F5F0E8;
+    background: #F8F9FA;
 }
 
 .faq-icon {
@@ -1012,7 +1012,7 @@ body {
     padding: 0 1.5rem;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.6;
 }
 
@@ -1066,15 +1066,15 @@ body {
 
 .appointment-info {
     flex: 1;
-    background: #F5F0E8;
+    background: #F8F9FA;
     padding: 2rem;
     border-radius: 20px;
     align-self: start;
 }
 
 .appointment-info h2 {
-    font-family: 'Playfair Display', serif;
-    color: #2C3E50;
+    font-family: 'Inter', sans-serif;
+    color: #212529;
     margin-bottom: 1.5rem;
 }
 
@@ -1086,7 +1086,7 @@ body {
 
 .appointment-info li {
     padding: 0.5rem 0;
-    color: #5D6D7E;
+    color: #6C757D;
 }
 
 .contact-info-box {
@@ -1125,7 +1125,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #2C3E50;
+    color: #212529;
 }
 
 .form-group input,
@@ -1160,7 +1160,7 @@ body {
 
 .form-note {
     font-size: 0.8rem;
-    color: #5D6D7E;
+    color: #6C757D;
     text-align: center;
     margin-top: 1rem;
 }
@@ -1198,13 +1198,13 @@ body {
 }
 
 .contact-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     color: #0A6E6E;
     margin-bottom: 1rem;
 }
 
 .contact-card p {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.6;
 }
 
@@ -1259,7 +1259,7 @@ body {
 }
 
 .about-page-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     color: #0A6E6E;
     margin-bottom: 1rem;
@@ -1267,12 +1267,12 @@ body {
 
 .about-page-content h3 {
     font-size: 1.3rem;
-    color: #2C3E50;
+    color: #212529;
     margin: 2rem 0 1rem 0;
 }
 
 .about-page-content p {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.7;
     margin-bottom: 1rem;
 }
@@ -1289,7 +1289,7 @@ body {
     gap: 1rem;
     align-items: start;
     padding: 1rem;
-    background: #F5F0E8;
+    background: #F8F9FA;
     border-radius: 12px;
 }
 
@@ -1314,7 +1314,7 @@ body {
 }
 
 .about-page-content li {
-    color: #5D6D7E;
+    color: #6C757D;
     margin-bottom: 0.5rem;
 }
 
@@ -1330,7 +1330,7 @@ body {
 }
 
 .about-page-placeholder {
-    background: linear-gradient(135deg, #0A6E6E10, #E8B86B10);
+    background: linear-gradient(135deg, #1E3A5F10, #0A6E6E10);
     border-radius: 30px;
     min-height: 400px;
     display: flex;
@@ -1372,7 +1372,7 @@ body {
 }
 
 .testimonial-text-full {
-    color: #5D6D7E;
+    color: #6C757D;
     line-height: 1.7;
     margin: 1rem 0;
     font-style: italic;
@@ -1380,7 +1380,7 @@ body {
 
 .testimonial-author-full strong {
     display: block;
-    color: #2C3E50;
+    color: #212529;
     margin-bottom: 0.25rem;
 }
 
@@ -1392,7 +1392,7 @@ body {
 .verified-badge {
     display: inline-block;
     background: #E8B86B20;
-    color: #E8B86B;
+    color: #0A6E6E;
     font-size: 0.7rem;
     padding: 0.2rem 0.6rem;
     border-radius: 50px;
@@ -1405,7 +1405,7 @@ body {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
-    background: #F5F0E8;
+    background: #F8F9FA;
     border-radius: 20px;
     margin: 2rem 0;
     text-align: center;
@@ -1419,13 +1419,13 @@ body {
 }
 
 .testimonials-stats .stat-label {
-    color: #5D6D7E;
+    color: #6C757D;
 }
 
 .testimonials-cta-page {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, #0A6E6E, #055252);
+    background: linear-gradient(135deg, #1E3A5F, #0A6E6E);
     border-radius: 20px;
     color: white;
 }
@@ -1487,8 +1487,8 @@ body {
 
 /* Footer */
 .footer {
-    background: #2C3E50;
-    color: #F5F0E8;
+    background: #1E3A5F;
+    color: #F8F9FA;
     padding: 3rem 5% 1rem;
     margin-top: 4rem;
 }
@@ -1500,9 +1500,9 @@ body {
     margin: 0 auto;
 }
 .footer-column h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1rem;
-    color: #E8B86B;
+    color: #0A6E6E;
 }
 .footer-column ul {
     list-style: none;
@@ -1512,11 +1512,11 @@ body {
     margin-bottom: 0.5rem;
 }
 .footer-column a {
-    color: #F5F0E8;
+    color: #F8F9FA;
     text-decoration: none;
 }
 .footer-column a:hover {
-    color: #E8B86B;
+    color: #0A6E6E;
 }
 .footer-bottom {
     text-align: center;
@@ -1525,3 +1525,4 @@ body {
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.8rem;
 }
+
